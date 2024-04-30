@@ -5,7 +5,7 @@ if (isset($_POST['name'])) {
     $phone = $_POST['user_pass'];
 
 
-    // data dase (my_project) doesn't exist yet
+    // database (my_project) doesn't exist yet
     $connection = mysqli_connect('localhost','root','','my_project');
     $sql = "INSERT INTO `contact` (`name`, `email`, `phone`) VALUES ('$name','$email','$phone')";
     mysqli_query($connection,$sql);
